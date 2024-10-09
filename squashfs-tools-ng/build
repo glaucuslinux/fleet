@@ -1,0 +1,37 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  autoreconf -vfis
+}
+
+configure() {
+  glaucus-configure \
+    --disable-static \
+    --disable-doxygen-doc \
+    --disable-doxygen-dot \
+    --disable-doxygen-html \
+    --with-pic \
+    --with-bzip2 \
+    --with-xz \
+    --with-lzo \
+    --with-lz4 \
+    --with-zstd \
+    --with-gzip
+}
+
+build() {
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install-strip
+}

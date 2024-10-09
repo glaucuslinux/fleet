@@ -1,0 +1,36 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/0001-Allow-input-files-to-be-missing-for-ed-style-${nom}es.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/0002-Fix-arbitrary-command-execution-in-ed-style-${nom}es-.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/CVE-2018-6951.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/CVE-2018-6952.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/CVE-2019-13636.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/CVE-2019-13638.$nom
+  $nom -p1 -i "$CERD"/$nom/${nom}es/alpine/CVE-2019-20633.$nom
+
+  autoreconf -vfis
+}
+
+configure() {
+  glaucus-configure
+}
+
+build() {
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install-strip
+
+  rm -fv "$SACD"/usr/lib/charset.alias
+}

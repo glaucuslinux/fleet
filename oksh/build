@@ -1,0 +1,40 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  :
+}
+
+configure() {
+  ./configure \
+    --prefix=/usr \
+    --bindir=/usr/bin \
+    --mandir=/usr/share/man \
+    --enable-lto
+}
+
+build() {
+  # netbsd-curses compatibility
+  LIBS=-lterminfo \
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install
+
+  cp -afv "$CERD"/$nom/ksh.kshrc "$SACD"/etc
+
+  ln -fnsv $nom "$SACD"/usr/bin/ksh
+  ln -fnsv $nom "$SACD"/usr/bin/rksh
+
+  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/ksh.1
+  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/rksh.1
+}

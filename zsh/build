@@ -1,0 +1,30 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  autoreconf -vfis
+}
+
+configure() {
+  glaucus-configure \
+    --enable-pcre \
+    --enable-cap \
+    --enable-multibyte \
+    --enable-libc-musl
+}
+
+build() {
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install-strip
+}

@@ -1,0 +1,30 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  :
+}
+
+configure() {
+  perl Makefile.PL INSTALLDIRS=vendor
+}
+
+build() {
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install
+
+  rm -fv \
+    "$SACD"/usr/lib/perl5/5.38/core_perl/perllocal.pod \
+    "$SACD"/usr/lib/perl5/5.38/vendor_perl/auto/XML/Parser/.packlist
+}

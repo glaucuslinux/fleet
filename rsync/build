@@ -1,0 +1,34 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  autoreconf -vfis
+}
+
+configure() {
+  glaucus-configure \
+    --disable-debug \
+    --without-included-popt \
+    --without-included-zlib
+}
+
+build() {
+  make
+}
+
+check() {
+  :
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install-strip
+
+  mkdir -pv "$SACD"/etc
+  cp -afv "$CERD"/$nom/${nom}d.conf "$SACD"/etc
+
+  cp -afv support/r$nom "$SACD"/usr/bin
+}

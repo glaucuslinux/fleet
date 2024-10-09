@@ -1,0 +1,41 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  autoreconf -vfis
+
+  # Disable locate because we're using `plocate`
+  patch -p0 -i $CERD/$nom/patches/glaucus/0001-disable-locate-updatedb-and-frcode.patch
+}
+
+configure() {
+  glaucus-configure \
+    --enable-threads=posix \
+    --disable-nls \
+    --disable-rpath \
+    --without-selinux \
+    --with-packager="$PRETTY_NAME" \
+    --with-packager-bug-reports=https://github.com/glaucuslinux/glaucus/issues
+}
+
+build() {
+  # Disable locate because we're using plocate
+  make \
+    -C locate \
+    dblocation.texi
+
+  make
+}
+
+check() {
+  make \
+    check
+}
+
+package() {
+  make \
+    DESTDIR="$SACD" \
+    install-strip
+}

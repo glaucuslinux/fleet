@@ -1,0 +1,50 @@
+# Copyright (c) 2018-2024, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+prepare() {
+  mkdir -pv build
+}
+
+configure() {
+  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-fix-man-page.patch
+
+  glaucus-muon \
+    -Dinstall_systemd=false \
+    -Dlocategroup=locate \
+    -Dupdatedb_progname=pupdatedb \
+    build
+}
+
+build() {
+  samu \
+    -C build
+}
+
+check() {
+  :
+}
+
+package() {
+  DESTDIR="$SACD" \
+  muon \
+    -C build \
+    install
+
+  cp -afv "$CERD"/$nom/updatedb.conf "$SACD"/etc
+
+  # Compatibility symlinks
+  ln -fnsv $nom "$SACD"/usr/bin/locate
+  ln -fnsv $nom "$SACD"/usr/bin/mlocate
+  ln -fnsv $nom "$SACD"/usr/bin/slocate
+  ln -fnsv pupdatedb "$SACD"/usr/bin/updatedb
+
+  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/locate.1
+  ln -fnsv ../man8/pupdatedb.8 "$SACD"/usr/share/man/man1/pupdatedb.1
+  ln -fnsv ../man8/pupdatedb.8 "$SACD"/usr/share/man/man1/updatedb.1
+
+  ln -fnsv pupdatedb.conf.5 "$SACD"/usr/share/man/man5/updatedb.conf.5
+
+  ln -fnsv $nom "$SACD"/var/lib/locate
+}
