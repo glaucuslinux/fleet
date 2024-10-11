@@ -11,5 +11,4 @@ glaucus community packages
 ## Mirrors
 - [Codeberg](https://codeberg.org/glaucuslinux/fleet)
 - [GitHub](https://github.com/glaucuslinux/fleet)
-- [GitLab](https://gitlab.com/glaucuslinux/fleet)
 - [SourceHut](https://git.sr.ht/~glaucuslinux/fleet)
