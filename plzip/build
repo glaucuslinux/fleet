@@ -35,6 +35,4 @@ package() {
 
   # Compatibility symlinks
   ln -fnsv $nom "$SACD"/usr/bin/lzip
-
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/lzip.1
 }

@@ -29,24 +29,7 @@ prepare() {
 
 configure() {
   CFLAGS="$CFLAGS -D_PATH_DHCPD_CONF='\"/etc/$nom/${nom}d.conf\"' -D_PATH_DHCLIENT_CONF='\"/etc/$nom/dhclient.conf\"'" \
-  ./configure \
-    --prefix=/usr \
-    --exec-prefix=/usr \
-    --bindir=/usr/bin \
-    --sbindir=/usr/bin \
-    --libexecdir=/usr/lib/$nom \
-    --sysconfdir=/etc/$nom \
-    --sharedstatedir=/var/lib \
-    --localstatedir=/var \
-    --runstatedir=/run \
-    --libdir=/usr/lib \
-    --includedir=/usr/include \
-    --datarootdir=/usr/share \
-    --datadir=/usr/share \
-    --infodir=/usr/share/info \
-    --localedir=/usr/share/locale \
-    --mandir=/usr/share/man \
-    --docdir=/usr/share/doc/$nom \
+  glaucus-configure \
     --enable-dhcpv4o6 \
     --enable-paranoia \
     --enable-log-pid \

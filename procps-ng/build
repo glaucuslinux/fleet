@@ -4,9 +4,12 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-use-utmpx.patch
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0002-fix-utmp-file-path.patch
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0003-netbsd-curses-compatibility.patch
+  for i in \
+  0001-use-utmpx \
+  0002-fix-utmp-file-path \
+  0003-netbsd-curses-compatibility; do
+    patch -p0 -i "$CERD"/$nom/patches/glaucus/$i.patch
+  done
 
   ./autogen.sh
 }
@@ -15,25 +18,7 @@ configure() {
   # `ncurses` support is enabled by default
   # `systemd` support is disabled by default
   LIBS='-lutmps -lskarnet' \
-  ./configure \
-    --prefix=/usr \
-    --exec-prefix=/usr \
-    --bindir=/usr/bin \
-    --sbindir=/usr/bin \
-    --libexecdir=/usr/lib/$nom \
-    --sysconfdir=/etc \
-    --sharedstatedir=/var/lib \
-    --localstatedir=/var \
-    --runstatedir=/run \
-    --libdir=/usr/lib \
-    --includedir=/usr/include \
-    --oldincludedir=/usr/include \
-    --datarootdir=/usr/share \
-    --datadir=/usr/share \
-    --infodir=/usr/share/info \
-    --localedir=/usr/share/locale \
-    --mandir=/usr/share/man \
-    --docdir=/usr/share/doc/$nom \
+  glaucus-configure \
     --disable-nls \
     --disable-static \
     --disable-rpath \

@@ -28,10 +28,4 @@ package() {
   ln -fnsv lbzcat "$SACD"/usr/bin/bzcat
   ln -fnsv $nom "$SACD"/usr/bin/bzip2
   ln -fnsv $nom "$SACD"/usr/bin/pbzip2
-
-  ln -fnsv lbunzip2.1 "$SACD"/usr/share/man/man1/bunzip2.1
-  ln -fnsv lbzcat.1 "$SACD"/usr/share/man/man1/bzcat.1
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/bzip2.1
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/lbzcat.1
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/lbunzip2.1
 }

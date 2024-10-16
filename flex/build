@@ -4,16 +4,16 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  cd "$TMPD"/$nom/$nom-$ver-stable
-
   ./autogen.sh
 }
 
 configure() {
   glaucus-configure \
-    --enable-opensslall \
-    --enable-opensslextra \
-    --enable-all
+    --disable-static \
+    --disable-nls \
+    --disable-rpath \
+    --disable-libfl \
+    --with-pic
 }
 
 build() {
@@ -21,8 +21,7 @@ build() {
 }
 
 check() {
-  make \
-    check
+  :
 }
 
 package() {
@@ -30,10 +29,5 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  ln -fnsv $nom/openssl "$SACD"/usr/include
-
-  for i in libcrypto libssl libtls; do
-    ln -fnsv lib$nom.so "$SACD"/usr/lib/$i.so
-    ln -fnsv $nom.pc "$SACD"/usr/lib/pkgconfig/$i.pc
-  done
+  ln -fnsv $nom "$SACD"/usr/bin/lex
 }

@@ -34,7 +34,4 @@ package() {
 
   ln -fnsv $nom "$SACD"/usr/bin/ksh
   ln -fnsv $nom "$SACD"/usr/bin/rksh
-
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/ksh.1
-  ln -fnsv $nom.1 "$SACD"/usr/share/man/man1/rksh.1
 }

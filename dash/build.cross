@@ -8,10 +8,10 @@ prepare() {
 }
 
 configure() {
-  glaucus-configure \
-    --enable-threads=posix \
-    --disable-rpath \
-    --disable-nls
+  "$CERD"/autoconf/glaucus-configure \
+    --build=$BLD \
+    --host=$TGT \
+    --with-libedit
 }
 
 build() {
@@ -24,6 +24,8 @@ check() {
 
 package() {
   make \
-    DESTDIR="$SACD" \
+    DESTDIR="$CRSD" \
     install-strip
+
+  ln -fnsv $nom "$CRSD"/usr/bin/sh
 }
