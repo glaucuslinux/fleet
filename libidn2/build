@@ -10,10 +10,10 @@ prepare() {
 configure() {
   glaucus-configure \
     --disable-static \
+    --enable-pic \
     --disable-rpath \
     --disable-nls \
     --disable-doc \
-    --with-pic \
     --with-packager="$PRETTY_NAME" \
     --with-packager-bug-reports=https://github.com/glaucuslinux/glaucus/issues
 }

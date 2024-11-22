@@ -13,7 +13,7 @@ configure() {
   ac_cv_prog_swig_found=no \
   glaucus-configure \
     --disable-static \
-    --with-pic \
+    --enable-pic \
     --without-python3
 }
 

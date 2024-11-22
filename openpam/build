@@ -9,7 +9,7 @@ prepare() {
 
 configure() {
   glaucus-configure \
-    --with-pic \
+    --enable-pic \
     --without-doc
 }
 

@@ -11,8 +11,8 @@ configure() {
   glaucus-configure \
     --enable-threads=posix \
     --disable-static \
-    --disable-rpath \
-    --with-pic
+    --enable-pic \
+    --disable-rpath
 }
 
 build() {

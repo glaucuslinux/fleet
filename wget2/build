@@ -15,12 +15,12 @@ configure() {
     --enable-threads=posix \
     --disable-rpath \
     --disable-static \
+    --enable-pic \
     --disable-nls \
     --disable-doc \
     --with-linux-crypto \
     --with-openssl \
     --without-included-regex \
-    --with-pic \
     --with-ssl=openssl \
     --without-libdane \
     --without-libpsl \

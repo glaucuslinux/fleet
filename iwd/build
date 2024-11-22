@@ -10,13 +10,13 @@ prepare() {
 configure() {
   glaucus-configure \
     --enable-pie \
+    --enable-pic \
     --disable-systemd-service \
     --enable-libedit \
     --enable-wired \
     --enable-hwsim \
     --enable-tools \
-    --enable-ofono \
-    --with-pic
+    --enable-ofono
 }
 
 build() {

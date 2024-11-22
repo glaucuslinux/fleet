@@ -12,8 +12,8 @@ configure() {
     --build=$BLD \
     --host=$TGT \
     --disable-static \
-    --enable-ltdl-install \
-    --with-pic
+    --enable-pic \
+    --enable-ltdl-install
 }
 
 build() {

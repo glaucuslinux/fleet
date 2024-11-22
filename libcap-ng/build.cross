@@ -15,7 +15,7 @@ configure() {
     --build=$BLD \
     --host=$TGT \
     --disable-static \
-    --with-pic \
+    --enable-pic \
     --without-python3
 }
 

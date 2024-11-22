@@ -10,6 +10,7 @@ prepare() {
 configure() {
   glaucus-configure \
     --disable-static \
+    --enable-pic \
     --disable-xml-docs \
     --disable-doxygen-docs \
     --disable-ducktype-docs \
@@ -22,7 +23,6 @@ configure() {
     --disable-systemd \
     --disable-tests \
     --enable-epoll \
-    --with-pic \
     --with-session-socket-dir=/tmp \
     --with-system-pid-file=/run/$nom/pid \
     --with-system-socket=/run/$nom/system_bus_socket \
