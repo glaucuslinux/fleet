@@ -14,7 +14,7 @@ configure() {
 
 build() {
   CFLAGS="$CFLAGS -DMKSH_BINSHPOSIX -DMKSH_BINSHREDUCED" \
-  sh "$SRCD"/mksh/mksh/Build.sh \
+  sh "$TMPD"/mksh/mksh/Build.sh \
     -L \
     -r
 }
