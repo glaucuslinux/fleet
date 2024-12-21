@@ -4,11 +4,8 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  rsync $RAD_RSYNC_FLAGS $SRCD/$nom $TSRC --delete \
-    --exclude $nom$ver.tar.gz
-  rsync $RAD_RSYNC_FLAGS $SRCD/tzdata/ $TSRC/$nom \
-    --exclude $nom$ver.tar.gz
-  cd "$TSRC"/$nom
+  cd "$TMPD"/$nom
+  cp -afv "$TMPD"/tzdata/* .
 }
 
 configure() {
