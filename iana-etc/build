@@ -22,7 +22,7 @@ check() {
 package() {
   mkdir -pv "$SACD"/etc
   cp -afv \
-    "$SRCD"/$nom/$nom-$ver/protocols \
-    "$SRCD"/$nom/$nom-$ver/services \
+    "$TMPD"/$nom/$nom-$ver/protocols \
+    "$TMPD"/$nom/$nom-$ver/services \
     "$SACD"/etc
 }
