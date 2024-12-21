@@ -11,7 +11,7 @@ prepare() {
 configure() {
   # `CC`, `AR`, `CFLAGS` and `LDFLAGS` have to be specified, otherwise they
   # won't be read, and `--disable-static` implies `--enable-shared`.
-  "$SRCD"/$nom/$nom-$ver/configure \
+  "$TMPD"/$nom/$nom-$ver/configure \
     --prefix=/usr \
     --exec-prefix=/usr \
     --bindir=/usr/bin \
