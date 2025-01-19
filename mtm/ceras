@@ -4,7 +4,6 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 nom="mtm"
-ver="git"
-cmt="b346b86"
+ver="b346b86"
 url="https://github.com/deadpixi/mtm"
 bld="netbsd-curses"
