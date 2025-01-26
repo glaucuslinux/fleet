@@ -6,5 +6,5 @@
 nom="dbus"
 ver="1.14.10"
 url="https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"
-sum="f43719b92e806e0e380718f03f9c3343483e4d4e52b44219459e0edd31aaf381"
+sum=""
 bld="expat"

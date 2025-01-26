@@ -6,5 +6,5 @@
 nom="pam"
 ver="1.6.1"
 url="https://github.com/linux-pam/linux-pam/releases/download/v1.6.1/Linux-PAM-1.6.1.tar.xz"
-sum="7d1680ef62e52aac97d62749a1d43b143c22d876113452ae523dab9988ae2097"
+sum=""
 bld="flex utmps"

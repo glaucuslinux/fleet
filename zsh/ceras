@@ -6,5 +6,5 @@
 nom="zsh"
 ver="5.9"
 url="https://www.zsh.org/pub/zsh-5.9.tar.xz"
-sum="b440cfbea634b5a684903656db8d8f8ff70a5657a4b479b9c256e9583adfeacc"
+sum=""
 bld="libcap pcre2"

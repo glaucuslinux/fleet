@@ -45,8 +45,6 @@ configure() {
 }
 
 build() {
-  # `dhcp` does not support parallel build!
-  MAKEFLAGS=-j1 \
   make
 }
 

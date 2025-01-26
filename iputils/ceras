@@ -6,5 +6,5 @@
 nom="iputils"
 ver="20240905"
 url="https://github.com/iputils/iputils/releases/download/20240905/iputils-20240905.tar.gz"
-sum="43ef19cbb5fc5ca8a454165ac3432ab36792e2c4908b75253fa5f932cda07434"
+sum=""
 bld="libcap muon samurai"

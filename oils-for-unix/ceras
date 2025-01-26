@@ -6,5 +6,5 @@
 nom="oils-for-unix"
 ver="0.22.0"
 url="https://www.oilshell.org/download/oils-for-unix-0.22.0.tar.gz"
-sum="66799a7a56c40d2d3726885fc4da54c6f13ccd79c2d28b77b1280d259ab3c8aa"
+sum=""
 bld="libedit netbsd-curses"

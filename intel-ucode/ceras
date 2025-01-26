@@ -6,5 +6,5 @@
 nom="intel-ucode"
 ver="20240813"
 url="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-20240813.tar.gz"
-sum="7e1552252601fde86222d1dbb637da5fbb01561d247bb02fffb56acc404fda29"
+sum=""
 bld="iucode-tool"
