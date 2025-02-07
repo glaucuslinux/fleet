@@ -24,6 +24,7 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
+  # Compatibility symlinks
   ln -fnsv lbunzip2 "$SACD"/usr/bin/bunzip2
   ln -fnsv lbzcat "$SACD"/usr/bin/bzcat
   ln -fnsv $nom "$SACD"/usr/bin/bzip2
