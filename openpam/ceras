@@ -5,6 +5,6 @@
 
 nom="openpam"
 ver="20230627"
-url="https://www.openpam.org/downloads/openpam-20230627.tar.gz"
+url="https://openpam.org/downloads/openpam-20230627.tar.gz"
 sum=""
 bld="flex"
