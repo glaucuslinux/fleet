@@ -20,10 +20,6 @@ build() {
     MANDIR=/usr/share/man/man3
 }
 
-check() {
-  :
-}
-
 package() {
   make \
     PREFIX=/usr \
