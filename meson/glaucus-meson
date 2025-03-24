@@ -10,7 +10,7 @@ exec meson setup \
   --includedir=/usr/include \
   --infodir=/usr/share/info \
   --libdir=/usr/lib \
-  --libexecdir=/usr/lib/$nom \
+  --libexecdir=/usr/bin \
   --localedir=/usr/share/locale \
   --localstatedir=/var \
   --mandir=/usr/share/man \
