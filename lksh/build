@@ -8,19 +8,11 @@ prepare() {
   cd build
 }
 
-configure() {
-  :
-}
-
 build() {
   CFLAGS="$CFLAGS -DMKSH_BINSHPOSIX -DMKSH_BINSHREDUCED" \
   sh "$TMPD"/mksh/mksh/Build.sh \
     -L \
     -r
-}
-
-check() {
-  :
 }
 
 package() {

@@ -3,14 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
-configure() {
-  :
-}
-
 build() {
   make \
     XZ_SUPPORT=1 \
@@ -19,10 +11,6 @@ build() {
     ZSTD_SUPPORT=1 \
     COMP_DEFAULT=zstd \
     -C $nom
-}
-
-check() {
-  :
 }
 
 package() {

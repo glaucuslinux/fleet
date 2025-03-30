@@ -8,18 +8,10 @@ prepare() {
   patch -p1 -i "$CERD"/$nom/patches/alpine/CVE-2021-30219.patch
 }
 
-configure() {
-  :
-}
-
 build() {
   make \
     BINDIR=/usr/bin \
     MANDIR=/usr/share/man
-}
-
-check() {
-  :
 }
 
 package() {

@@ -3,10 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   LIBS=-lterminfo \
   ac_cv_sizeof_int=4 \
@@ -56,10 +52,6 @@ build() {
   make
 }
 
-check() {
-  :
-}
-
 package() {
   make \
     DESTDIR="$SACD" \
@@ -70,5 +62,5 @@ package() {
 
   ln -fnsv $nom "$SACD"/usr/bin/vi
 
-  cp -afv "$CERD"/$nom/${nom}rc "$SACD"/usr/share/$nom
+  cp -afv "$CERD"/$nom/files/${nom}rc "$SACD"/usr/share/$nom
 }

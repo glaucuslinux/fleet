@@ -31,10 +31,6 @@ build() {
   make
 }
 
-check() {
-  :
-}
-
 package() {
   # `install-bin-strip` ensures that the `minilzip` binary is installed
   make \

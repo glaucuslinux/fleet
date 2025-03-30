@@ -1,0 +1,11 @@
+# Copyright (c) 2018-2025, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+nom="oils-for-unix"
+ver="0.22.0"
+url="https://oilshell.org/download/oils-for-unix-0.22.0.tar.gz"
+sum=""
+bld="libedit netbsd-curses"
+nop="check"

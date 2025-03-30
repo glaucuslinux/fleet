@@ -3,10 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   # Environment variables (e.g. CFLAGS) have to be explicitly specified.
   # INCLUDEDIR and LIBDIR are only needed when libmandoc.a is being installed.
@@ -80,10 +76,6 @@ LN='ln -fnsv'" > configure.local
 
 build() {
   make
-}
-
-check() {
-  :
 }
 
 package() {

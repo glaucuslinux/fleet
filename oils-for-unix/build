@@ -3,10 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   ./configure \
     --prefix=/usr \
@@ -16,10 +12,6 @@ configure() {
 
 build() {
   _build/oils.sh
-}
-
-check() {
-  :
 }
 
 package() {

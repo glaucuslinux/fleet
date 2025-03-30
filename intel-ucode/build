@@ -3,10 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   mkdir -pv kernel/x86/microcode
 }
@@ -15,10 +11,6 @@ build() {
   iucode_tool \
     --write-earlyfw=$nom.img $nom/ $nom-with-caveats/ \
     --overwrite
-}
-
-check() {
-  :
 }
 
 package() {

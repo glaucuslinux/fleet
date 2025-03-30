@@ -3,21 +3,9 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
-configure() {
-  :
-}
-
 build() {
   python3 setup.py \
     build
-}
-
-check() {
-  :
 }
 
 package() {
@@ -28,5 +16,5 @@ package() {
     --force \
     --skip-build
 
-  cp -afv "$CERD"/$nom/glaucus-$nom "$SACD"/usr/bin
+  cp -afv "$CERD"/$nom/files/glaucus-$nom "$SACD"/usr/bin
 }

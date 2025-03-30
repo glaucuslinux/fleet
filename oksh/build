@@ -3,10 +3,6 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   ./configure \
     --prefix=/usr \
@@ -21,16 +17,12 @@ build() {
   make
 }
 
-check() {
-  :
-}
-
 package() {
   make \
     DESTDIR="$SACD" \
     install
 
-  cp -afv "$CERD"/$nom/ksh.kshrc "$SACD"/etc
+  cp -afv "$CERD"/$nom/files/ksh.kshrc "$SACD"/etc
 
   ln -fnsv $nom "$SACD"/usr/bin/ksh
   ln -fnsv $nom "$SACD"/usr/bin/rksh

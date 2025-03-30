@@ -7,18 +7,6 @@ prepare() {
   cd "$TMPD"/$nom
 }
 
-configure() {
-  :
-}
-
-build() {
-  :
-}
-
-check() {
-  :
-}
-
 package() {
   # Don't run `make install` as it builds and installs unnecessary stuff
   ln -fnsv "$SACD"/usr/share/zoneinfo/Asia/Damascus "$SACD"/etc/localtime

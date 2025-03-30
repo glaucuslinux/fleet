@@ -22,10 +22,6 @@ build() {
     zic
 }
 
-check() {
-  :
-}
-
 package() {
   mkdir -pv "$SACD"/usr/bin
   cp -afv \

@@ -1,0 +1,11 @@
+# Copyright (c) 2018-2025, Firas Khalil Khana
+# Distributed under the terms of the ISC License
+
+# Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
+
+nom="zsh"
+ver="5.9"
+url="https://zsh.org/pub/zsh-5.9.tar.xz"
+sum=""
+bld="libcap pcre2"
+nop="check"

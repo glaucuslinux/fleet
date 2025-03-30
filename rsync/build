@@ -18,17 +18,13 @@ build() {
   make
 }
 
-check() {
-  :
-}
-
 package() {
   make \
     DESTDIR="$SACD" \
     install-strip
 
   mkdir -pv "$SACD"/etc
-  cp -afv "$CERD"/$nom/${nom}d.conf "$SACD"/etc
+  cp -afv "$CERD"/$nom/files/${nom}d.conf "$SACD"/etc
 
   cp -afv support/r$nom "$SACD"/usr/bin
 }

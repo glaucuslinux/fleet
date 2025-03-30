@@ -3,20 +3,12 @@
 
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
-prepare() {
-  :
-}
-
 configure() {
   perl Makefile.PL INSTALLDIRS=vendor
 }
 
 build() {
   make
-}
-
-check() {
-  :
 }
 
 package() {
