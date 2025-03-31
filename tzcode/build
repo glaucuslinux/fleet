@@ -5,7 +5,7 @@
 
 prepare() {
   cd "$TMPD"/$nom
-  cp -fPpR "$TMPD"/tzdata/* .
+  cp -fPpR "$TMPD"/tzdata/. .
 }
 
 configure() {
