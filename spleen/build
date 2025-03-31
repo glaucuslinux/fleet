@@ -4,8 +4,8 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 package() {
-  mkdir -pv "$SACD"/usr/share/consolefonts
-  cp -afv \
+  mkdir -p "$SACD"/usr/share/consolefonts
+  cp -fPp \
     "$TMPD"/$nom/$nom-$ver/$nom-12x24.psfu \
     "$TMPD"/$nom/$nom-$ver/$nom-16x32.psfu \
     "$TMPD"/$nom/$nom-$ver/$nom-32x64.psfu \

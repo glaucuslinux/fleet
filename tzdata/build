@@ -9,7 +9,7 @@ prepare() {
 
 package() {
   # Don't run `make install` as it builds and installs unnecessary stuff
-  ln -fnsv "$SACD"/usr/share/zoneinfo/Asia/Damascus "$SACD"/etc/localtime
+  ln -fs "$SACD"/usr/share/zoneinfo/Asia/Damascus "$SACD"/etc/localtime
 
   zic -b fat -d "$SACD"/usr/share/zoneinfo africa antarctica asia australasia \
     backward backzone etcetera europe factory northamerica southamerica
@@ -22,7 +22,7 @@ package() {
 
   zic -d "$SACD"/usr/share/zoneinfo -p Asia/Damascus
 
-  cp -afv \
+  cp -fPp \
     iso3166.tab \
     leap-seconds.list \
     zone1970.tab \

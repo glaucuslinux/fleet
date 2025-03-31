@@ -69,7 +69,7 @@ INCLUDEDIR=/usr/include
 LIBDIR=/usr/lib
 MANDIR=/usr/share/man
 
-LN='ln -fnsv'" > configure.local
+LN='ln -fs'" > configure.local
 
   ./configure
 }

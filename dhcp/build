@@ -4,24 +4,28 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  cp -afv $CERD/binutils/config.guess .
-  cp -afv $CERD/binutils/config.sub .
+  cp -fPp $CERD/binutils/config.guess .
+  cp -fPp $CERD/binutils/config.sub .
 
   # bind mess
   tar xvf bind/bind.tar.gz -C bind
 
-  cp -afv $CERD/binutils/config.guess bind/bind-9.11.36
-  cp -afv $CERD/binutils/config.sub bind/bind-9.11.36
+  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36
+  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36
 
-  cp -afv $CERD/binutils/config.guess bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
-  cp -afv $CERD/binutils/config.sub bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
+  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
+  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36/contrib/dnsperf-2.1.0.0-1
 
-  cp -afv $CERD/binutils/config.guess bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
-  cp -afv $CERD/binutils/config.sub bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
+  cp -fPp $CERD/binutils/config.guess bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
+  cp -fPp $CERD/binutils/config.sub bind/bind-9.11.36/contrib/idn/idnkit-1.0-src
 
-  patch -p1 -i $CERD/$nom/patches/gentoo/$nom-4.4.3-fix-perms.patch.patch
+  patch \
+    -i $CERD/$nom/patches/gentoo/$nom-4.4.3-fix-perms.patch.patch \
+    -p 1
 
-  patch -p1 -i $CERD/$nom/patches/openembedded/0001-workaround-busybox-limitation-in-linux-dhclient-script.patch
+  patch \
+    -i $CERD/$nom/patches/openembedded/0001-workaround-busybox-limitation-in-linux-dhclient-script.patch \
+    -p 1
 }
 
 configure() {
@@ -53,19 +57,19 @@ package() {
     DESTDIR=$SACD \
     install-strip
 
-  mv -fv $SACD/etc/$nom/dhclient.conf.example $SACD/etc/$nom/dhclient.conf
-  cp -afv doc/examples/dhclient-${nom}v6.conf $SACD/etc/$nom/dhclient6.conf
-  mv -fv $SACD/etc/$nom/${nom}d.conf.example $SACD/etc/$nom/${nom}d.conf
-  cp -afv doc/examples/${nom}d-${nom}v6.conf $SACD/etc/$nom/${nom}d6.conf
+  mv -f $SACD/etc/$nom/dhclient.conf.example $SACD/etc/$nom/dhclient.conf
+  cp -fPp doc/examples/dhclient-${nom}v6.conf $SACD/etc/$nom/dhclient6.conf
+  mv -f $SACD/etc/$nom/${nom}d.conf.example $SACD/etc/$nom/${nom}d.conf
+  cp -fPp doc/examples/${nom}d-${nom}v6.conf $SACD/etc/$nom/${nom}d6.conf
 
-  cp -afv client/scripts/linux $SACD/usr/bin/dhclient-script
+  cp -fPp client/scripts/linux $SACD/usr/bin/dhclient-script
 
   rm -fv \
     $SACD/usr/lib/lib$nom.a \
     $SACD/usr/lib/lib${nom}ctl.a \
     $SACD/usr/lib/libomapi.a
 
-  mkdir -pv \
+  mkdir -p \
     $SACD/run/$nom \
     $SACD/var/lib/$nom
 }

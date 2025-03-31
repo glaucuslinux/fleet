@@ -4,7 +4,9 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch
+  patch \
+    -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch \
+    -p 0
 }
 
 build() {
@@ -22,7 +24,7 @@ package() {
     DESTDIR="$SACD" \
     install
 
-  mv -fv "$SACD"/usr/lib/libargp.so "$SACD"/usr/lib/libargp.so.0.0.0
-  ln -fnsv libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so
-  ln -fnsv libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so.0
+  mv -f "$SACD"/usr/lib/libargp.so "$SACD"/usr/lib/libargp.so.0.0.0
+  ln -fs libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so
+  ln -fs libargp.so.0.0.0 "$SACD"/usr/lib/libargp.so.0
 }

@@ -4,8 +4,12 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  patch -p1 -i $CERD/$nom/patches/alpine/fix-uninitialized.patch
-  patch -p1 -i $CERD/$nom/patches/alpine/musl-macros.patch
+  patch \
+    -i $CERD/$nom/patches/alpine/fix-uninitialized.patch \
+    -p 1
+  patch \
+    -i $CERD/$nom/patches/alpine/musl-macros.patch \
+    -p 1
 
   autoreconf -vfis
 }

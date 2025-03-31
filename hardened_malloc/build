@@ -11,8 +11,8 @@ build() {
 }
 
 package() {
-  mkdir -pv "$SACD"/usr/lib
-  mv -fv \
+  mkdir -p "$SACD"/usr/lib
+  mv -f \
     out/lib$nom.so \
     out-light/lib$nom-light.so \
     "$SACD"/usr/lib

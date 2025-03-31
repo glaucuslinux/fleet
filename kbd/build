@@ -32,9 +32,9 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  ln -fnsv openvt "$SACD"/usr/bin/open
+  ln -fs openvt "$SACD"/usr/bin/open
 
-  rm -frv \
+  rm -fRv \
     "$SACD"/usr/share/keymaps/amiga \
     "$SACD"/usr/share/keymaps/atari \
     "$SACD"/usr/share/keymaps/i386/qwerty/ro_win.map.gz \

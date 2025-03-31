@@ -4,7 +4,7 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  mkdir -pv build
+  mkdir -p build
 }
 
 configure() {
@@ -34,6 +34,6 @@ package() {
     -C build \
     install
 
-  ln -fnsv ping "$SACD"/usr/bin/ping6
-  ln -fnsv tracepath "$SACD"/usr/bin/tracepath6
+  ln -fs ping "$SACD"/usr/bin/ping6
+  ln -fs tracepath "$SACD"/usr/bin/tracepath6
 }

@@ -32,7 +32,7 @@ package() {
     install-strip
 
 for i in egrep fgrep grep ug; do
-  ln -fnsv $nom "$SACD"/usr/bin/$i
+  ln -fs $nom "$SACD"/usr/bin/$i
 done
-  ln -fnsv $nom+ "$SACD"/usr/bin/ug+
+  ln -fs $nom+ "$SACD"/usr/bin/ug+
 }

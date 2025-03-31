@@ -28,6 +28,6 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  mkdir -pv "$SACD"/etc/$nom
-  cp -afv "$CERD"/$nom/main.conf "$SACD"/etc/$nom
+  mkdir -p "$SACD"/etc/$nom
+  cp -fPp "$CERD"/$nom/main.conf "$SACD"/etc/$nom
 }

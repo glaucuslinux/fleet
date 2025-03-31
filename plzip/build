@@ -26,5 +26,5 @@ package() {
     install-strip
 
   # Compatibility symlinks
-  ln -fnsv $nom "$SACD"/usr/bin/lzip
+  ln -fs $nom "$SACD"/usr/bin/lzip
 }

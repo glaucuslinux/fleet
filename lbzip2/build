@@ -21,8 +21,8 @@ package() {
     install-strip
 
   # Compatibility symlinks
-  ln -fnsv lbunzip2 "$SACD"/usr/bin/bunzip2
-  ln -fnsv lbzcat "$SACD"/usr/bin/bzcat
-  ln -fnsv $nom "$SACD"/usr/bin/bzip2
-  ln -fnsv $nom "$SACD"/usr/bin/pbzip2
+  ln -fs lbunzip2 "$SACD"/usr/bin/bunzip2
+  ln -fs lbzcat "$SACD"/usr/bin/bzcat
+  ln -fs $nom "$SACD"/usr/bin/bzip2
+  ln -fs $nom "$SACD"/usr/bin/pbzip2
 }

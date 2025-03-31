@@ -4,7 +4,9 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-fix-CFLAGS-and-LDFLAGS.patch
+  patch \
+    -i "$CERD"/$nom/patches/glaucus/0001-fix-CFLAGS-and-LDFLAGS.patch \
+    -p 0
 }
 
 build() {
@@ -12,6 +14,6 @@ build() {
 }
 
 package() {
-  mkdir -pv "$SACD"/usr/bin
-  mv -fv $nom "$SACD"/usr/bin
+  mkdir -p "$SACD"/usr/bin
+  mv -f $nom "$SACD"/usr/bin
 }

@@ -57,10 +57,10 @@ package() {
     DESTDIR="$SACD" \
     install
 
-  mkdir -pv "$SACD"/etc
-  ln -fnsv ../usr/share/$nom/${nom}rc "$SACD"/etc
+  mkdir -p "$SACD"/etc
+  ln -fs ../usr/share/$nom/${nom}rc "$SACD"/etc
 
-  ln -fnsv $nom "$SACD"/usr/bin/vi
+  ln -fs $nom "$SACD"/usr/bin/vi
 
-  cp -afv "$CERD"/$nom/files/${nom}rc "$SACD"/usr/share/$nom
+  cp -fPp "$CERD"/$nom/files/${nom}rc "$SACD"/usr/share/$nom
 }

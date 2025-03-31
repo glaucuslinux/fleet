@@ -27,5 +27,5 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  ln -fnsv $nom.pc "$SACD"/usr/lib/libobstack.pc
+  ln -fs $nom.pc "$SACD"/usr/lib/libobstack.pc
 }

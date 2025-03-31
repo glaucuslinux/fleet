@@ -4,7 +4,7 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 configure() {
-  mkdir -pv kernel/x86/microcode
+  mkdir -p kernel/x86/microcode
 }
 
 build() {
@@ -14,6 +14,6 @@ build() {
 }
 
 package() {
-  mkdir -pv "$SACD"/boot
-  mv -fv $nom.img "$SACD"/boot
+  mkdir -p "$SACD"/boot
+  mv -f $nom.img "$SACD"/boot
 }

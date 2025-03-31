@@ -30,5 +30,5 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  chmod -v 4755 "$SACD"/usr/bin/unix_chkpwd
+  chmod 4755 "$SACD"/usr/bin/unix_chkpwd
 }

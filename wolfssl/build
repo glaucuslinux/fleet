@@ -30,10 +30,10 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  ln -fnsv $nom/openssl "$SACD"/usr/include
+  ln -fs $nom/openssl "$SACD"/usr/include
 
   for i in libcrypto libssl libtls; do
-    ln -fnsv lib$nom.so "$SACD"/usr/lib/$i.so
-    ln -fnsv $nom.pc "$SACD"/usr/lib/pkgconfig/$i.pc
+    ln -fs lib$nom.so "$SACD"/usr/lib/$i.so
+    ln -fs $nom.pc "$SACD"/usr/lib/pkgconfig/$i.pc
   done
 }

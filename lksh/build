@@ -16,5 +16,5 @@ build() {
 }
 
 package() {
-  mv -fv $nom "$SACD"/usr/bin
+  mv -f $nom "$SACD"/usr/bin
 }

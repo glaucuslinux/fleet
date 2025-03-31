@@ -8,7 +8,9 @@ prepare() {
   0001-use-utmpx \
   0002-fix-utmp-file-path \
   0003-netbsd-curses-compatibility; do
-    patch -p0 -i "$CERD"/$nom/patches/glaucus/$i.patch
+    patch \
+      -i "$CERD"/$nom/patches/glaucus/$i.patch \
+      -p 0
   done
 
   ./autogen.sh
@@ -41,6 +43,6 @@ package() {
     install-strip
 
   # `pidwait` and `pkill` are identical to `pgrep`
-  ln -fnsv pgrep "$SACD"/usr/bin/pidwait
-  ln -fnsv pgrep "$SACD"/usr/bin/pkill
+  ln -fs pgrep "$SACD"/usr/bin/pidwait
+  ln -fs pgrep "$SACD"/usr/bin/pkill
 }

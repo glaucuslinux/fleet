@@ -27,10 +27,10 @@ package() {
     DESTDIR="$CRSD" \
     install-strip
 
-  ln -fnsv $nom/openssl "$CRSD"/usr/include
+  ln -fs $nom/openssl "$CRSD"/usr/include
 
   for i in libcrypto libssl libtls; do
-    ln -fnsv lib$nom.so "$CRSD"/usr/lib/$i.so
-    ln -fnsv $nom.pc "$CRSD"/usr/lib/pkgconfig/$i.pc
+    ln -fs lib$nom.so "$CRSD"/usr/lib/$i.so
+    ln -fs $nom.pc "$CRSD"/usr/lib/pkgconfig/$i.pc
   done
 }

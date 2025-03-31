@@ -8,8 +8,8 @@ build() {
 }
 
 package() {
-  mkdir -pv "$SACD"/usr/bin
-  mv -fv $nom "$SACD"/usr/bin
-  ln -fnsv $nom "$SACD"/usr/bin/ksh
-  ln -fnsv $nom "$SACD"/usr/bin/rksh
+  mkdir -p "$SACD"/usr/bin
+  mv -f $nom "$SACD"/usr/bin
+  ln -fs $nom "$SACD"/usr/bin/ksh
+  ln -fs $nom "$SACD"/usr/bin/rksh
 }

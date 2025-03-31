@@ -22,8 +22,8 @@ package() {
     DESTDIR="$SACD" \
     install
 
-  cp -afv "$CERD"/$nom/files/ksh.kshrc "$SACD"/etc
+  cp -fPp "$CERD"/$nom/files/ksh.kshrc "$SACD"/etc
 
-  ln -fnsv $nom "$SACD"/usr/bin/ksh
-  ln -fnsv $nom "$SACD"/usr/bin/rksh
+  ln -fs $nom "$SACD"/usr/bin/ksh
+  ln -fs $nom "$SACD"/usr/bin/rksh
 }

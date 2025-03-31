@@ -27,5 +27,5 @@ package() {
     -C build \
     install/strip
 
-  ln -fnsv $nom "$SACD"/usr/bin/ld
+  ln -fs $nom "$SACD"/usr/bin/ld
 }

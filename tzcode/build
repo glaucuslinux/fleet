@@ -5,11 +5,13 @@
 
 prepare() {
   cd "$TMPD"/$nom
-  cp -afv "$TMPD"/tzdata/* .
+  cp -fPpR "$TMPD"/tzdata/* .
 }
 
 configure() {
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch
+  patch \
+    -i "$CERD"/$nom/patches/glaucus/0001-disable-static.patch \
+    -p 0
 }
 
 build() {
@@ -23,14 +25,14 @@ build() {
 }
 
 package() {
-  mkdir -pv "$SACD"/usr/bin
-  cp -afv \
+  mkdir -p "$SACD"/usr/bin
+  cp -fPp \
     tzselect \
     zdump \
     zic \
     "$SACD"/usr/bin
 
-  mkdir -pv \
+  mkdir -p \
     "$SACD"/usr/share/zoneinfo/posix \
     "$SACD"/usr/share/zoneinfo/right
 }

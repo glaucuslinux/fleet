@@ -31,7 +31,7 @@ package() {
     install-strip
 
 for i in egrep fgrep grep ug; do
-  ln -fnsv $nom "$CRSD"/usr/bin/$i
+  ln -fs $nom "$CRSD"/usr/bin/$i
 done
-  ln -fnsv $nom+ "$CRSD"/usr/bin/ug+
+  ln -fs $nom+ "$CRSD"/usr/bin/ug+
 }

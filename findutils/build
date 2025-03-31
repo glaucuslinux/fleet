@@ -7,7 +7,9 @@ prepare() {
   autoreconf -vfis
 
   # Disable locate because we're using `plocate`
-  patch -p0 -i $CERD/$nom/patches/glaucus/0001-disable-locate-updatedb-and-frcode.patch
+  patch \
+    -i $CERD/$nom/patches/glaucus/0001-disable-locate-updatedb-and-frcode.patch \
+    -p 0
 }
 
 configure() {

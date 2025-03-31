@@ -33,5 +33,5 @@ package() {
     DESTDIR="$SACD" \
     install-strip
 
-  ln -fnsv $nom "$SACD"/usr/bin/lex
+  ln -fs $nom "$SACD"/usr/bin/lex
 }

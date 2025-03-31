@@ -4,11 +4,13 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  mkdir -pv build
+  mkdir -p build
 }
 
 configure() {
-  patch -p0 -i "$CERD"/$nom/patches/glaucus/0001-fix-man-page.patch
+  patch \
+    -i "$CERD"/$nom/patches/glaucus/0001-fix-man-page.patch \
+    -p 0
 
   glaucus-muon \
     -Dinstall_systemd=false \
@@ -28,13 +30,13 @@ package() {
     -C build \
     install
 
-  cp -afv "$CERD"/$nom/files/updatedb.conf "$SACD"/etc
+  cp -fPp "$CERD"/$nom/files/updatedb.conf "$SACD"/etc
 
   # Compatibility symlinks
   for i in locate mlocate slocate; do
-    ln -fnsv $nom "$SACD"/usr/bin/$i
+    ln -fs $nom "$SACD"/usr/bin/$i
   done
-  ln -fnsv pupdatedb "$SACD"/usr/bin/updatedb
+  ln -fs pupdatedb "$SACD"/usr/bin/updatedb
 
-  ln -fnsv $nom "$SACD"/var/lib/locate
+  ln -fs $nom "$SACD"/var/lib/locate
 }

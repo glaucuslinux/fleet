@@ -4,9 +4,11 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 prepare() {
-  patch -p1 -i "$CERD"/$nom/patches/alpine/ioctl.patch
+  patch \
+    -i "$CERD"/$nom/patches/alpine/ioctl.patch \
+    -p 1
 
-  mkdir -pv build
+  mkdir -p build
 }
 
 configure() {
@@ -31,21 +33,21 @@ package() {
     install/strip
 
   # Hardcoded `gcc` version number
-  mkdir -pv "$SACD"/usr/lib/$nom
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/c89
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/c++
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/c99
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/cc
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/cpp
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/g++
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/gcc
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/gcc-14.2.0
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c++
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c89
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c99
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-cc
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-cpp
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-g++
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-gcc
-  ln -fnsv ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-gcc-14.2.0
+  mkdir -p "$SACD"/usr/lib/$nom
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/c89
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/c++
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/c99
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/cc
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/cpp
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/g++
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/gcc
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/gcc-14.2.0
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c++
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c89
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-c99
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-cc
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-cpp
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-g++
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-gcc
+  ln -fs ../../bin/$nom "$SACD"/usr/lib/$nom/$TGT-gcc-14.2.0
 }

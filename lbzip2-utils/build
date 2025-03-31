@@ -21,15 +21,15 @@ package() {
     install-strip
 
   # Compatibility symlinks
-  ln -fnsv lbzcmp "$SACD"/usr/bin/bzcmp
-  ln -fnsv lbzdiff "$SACD"/usr/bin/bzdiff
-  ln -fnsv lbzegrep "$SACD"/usr/bin/bzegrep
-  ln -fnsv lbzexe "$SACD"/usr/bin/bzexe
-  ln -fnsv lbzfgrep "$SACD"/usr/bin/bzfgrep
-  ln -fnsv lbzforce "$SACD"/usr/bin/bzforce
-  ln -fnsv lbzgrep "$SACD"/usr/bin/bzgrep
-  ln -fnsv lbzrecover "$SACD"/usr/bin/bzip2recover
-  ln -fnsv lbzless "$SACD"/usr/bin/bzless
-  ln -fnsv lbzmerge "$SACD"/usr/bin/bzmerge
-  ln -fnsv lbzmore "$SACD"/usr/bin/bzmore
+  ln -fs lbzcmp "$SACD"/usr/bin/bzcmp
+  ln -fs lbzdiff "$SACD"/usr/bin/bzdiff
+  ln -fs lbzegrep "$SACD"/usr/bin/bzegrep
+  ln -fs lbzexe "$SACD"/usr/bin/bzexe
+  ln -fs lbzfgrep "$SACD"/usr/bin/bzfgrep
+  ln -fs lbzforce "$SACD"/usr/bin/bzforce
+  ln -fs lbzgrep "$SACD"/usr/bin/bzgrep
+  ln -fs lbzrecover "$SACD"/usr/bin/bzip2recover
+  ln -fs lbzless "$SACD"/usr/bin/bzless
+  ln -fs lbzmerge "$SACD"/usr/bin/bzmerge
+  ln -fs lbzmore "$SACD"/usr/bin/bzmore
 }
