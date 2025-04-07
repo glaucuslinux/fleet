@@ -15,6 +15,4 @@ package() {
     --optimize=2 \
     --force \
     --skip-build
-
-  cp -fPp "$CERD"/$nom/files/glaucus-$nom "$SACD"/usr/bin
 }
