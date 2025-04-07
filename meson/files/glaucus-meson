@@ -4,25 +4,28 @@
 # Distributed under the terms of the ISC License
 
 exec meson setup \
-  --prefix=/usr \
-  --bindir=/usr/bin \
-  --datadir=/usr/share \
-  --includedir=/usr/include \
-  --infodir=/usr/share/info \
-  --libdir=/usr/lib \
-  --libexecdir=/usr/bin \
-  --localedir=/usr/share/locale \
-  --localstatedir=/var \
-  --mandir=/usr/share/man \
-  --sbindir=/usr/bin \
-  --sharedstatedir=/var/lib \
-  --sysconfdir=/etc \
-  --backend=ninja \
-  --buildtype=release \
-  --default-library=shared \
-  --stdsplit \
-  --strip \
-  --wrap-mode=nodownload \
+  -Dprefix=/usr \
+  -Dbindir=/usr/bin \
+  -Ddatadir=/usr/share \
+  -Dincludedir=/usr/include \
+  -Dinfodir=/usr/share/info \
+  -Dlibdir=/usr/lib \
+  -Dlibexecdir=/usr/bin \
+  -Dlocaledir=/usr/share/locale \
+  -Dlocalstatedir=/var \
+  -Dmandir=/usr/share/man \
+  -Dsbindir=/usr/bin \
+  -Dsharedstatedir=/var/lib \
+  -Dsysconfdir=/etc \
+  -Dauto_features=enabled \
+  -Dbackend=ninja \
+  -Dbuildtype=release \
+  -Ddebug=false \
+  -Ddefault_library=shared \
+  -Doptimization=2 \
+  -Dstdsplit=true \
+  -Dstrip=true \
+  -Dwrap-mode=nodownload \
   -Db_lto=true \
   -Db_lto_mode=thin \
   -Db_pie=true \
