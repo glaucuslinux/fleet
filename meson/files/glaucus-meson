@@ -23,7 +23,7 @@ exec meson setup \
   -Ddefault_library=shared \
   -Dstdsplit=true \
   -Dstrip=true \
-  -Dwrap-mode=nodownload \
+  -Dwrap_mode=nodownload \
   -Db_lto=true \
   -Db_lto_mode=thin \
   -Db_pie=true \
