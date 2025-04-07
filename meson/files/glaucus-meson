@@ -20,9 +20,7 @@ exec meson setup \
   -Dauto_features=enabled \
   -Dbackend=ninja \
   -Dbuildtype=release \
-  -Ddebug=false \
   -Ddefault_library=shared \
-  -Doptimization=2 \
   -Dstdsplit=true \
   -Dstrip=true \
   -Dwrap-mode=nodownload \
