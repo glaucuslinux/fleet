@@ -4,8 +4,8 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 nom="oils-for-unix"
-ver="0.22.0"
-url="https://oilshell.org/download/oils-for-unix-0.22.0.tar.gz"
-sum=""
+ver="0.24.0"
+url="https://oilshell.org/download/oils-for-unix-0.24.0.tar.gz"
+sum="4a63f725a1f115c37906d65564bd5810"
 bld="libedit netbsd-curses"
 nop="check"

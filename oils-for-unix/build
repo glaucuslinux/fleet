@@ -6,7 +6,6 @@
 configure() {
   ./configure \
     --prefix=/usr \
-    --datarootdir=/usr/share \
     --with-readline
 }
 
