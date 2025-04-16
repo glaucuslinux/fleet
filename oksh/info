@@ -4,7 +4,7 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 nom="oksh"
-ver="7.5"
-url="https://github.com/ibara/oksh/releases/download/oksh-7.5/oksh-7.5.tar.gz"
-sum=""
+ver="7.6"
+url="https://github.com/ibara/oksh/releases/download/oksh-7.6/oksh-7.6.tar.gz"
+sum="e23f338255d567484b9edf9bff4a596e"
 bld="netbsd-curses"

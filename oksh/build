@@ -6,8 +6,6 @@
 configure() {
   ./configure \
     --prefix=/usr \
-    --bindir=/usr/bin \
-    --mandir=/usr/share/man \
     --enable-lto
 }
 
