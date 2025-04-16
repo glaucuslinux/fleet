@@ -6,11 +6,6 @@
 configure() {
   ./configure \
     --prefix=/usr \
-    --exec-prefix=/usr \
-    --bindir=/usr/bin \
-    --sharedir=/usr/share \
-    --docdir=/usr/share/doc/$nom \
-    --mandir=/usr/share/man \
     --enable-lua \
     --disable-selinux \
     --enable-acl
