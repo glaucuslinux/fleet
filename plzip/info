@@ -4,9 +4,9 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 nom="plzip"
-ver="1.11"
-url="https://download.savannah.nongnu.org/releases/lzip/plzip/plzip-1.11.tar.gz"
-sum=""
+ver="1.12"
+url="https://download.savannah.nongnu.org/releases/lzip/plzip/plzip-1.12.tar.gz"
+sum="16f779c85dc72a436493f58a5cd3c0db"
 bld="lzlib"
 run="gcc"
 nop="check"
