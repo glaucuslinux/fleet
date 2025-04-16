@@ -13,13 +13,6 @@ configure() {
   # won't be read, and `--disable-static` implies `--enable-shared`.
   "$TMPD"/$nom/$nom-$ver/configure \
     --prefix=/usr \
-    --exec-prefix=/usr \
-    --bindir=/usr/bin \
-    --datarootdir=/usr/share \
-    --includedir=/usr/include \
-    --infodir=/usr/share/info \
-    --libdir=/usr/lib \
-    --mandir=/usr/share/man \
     --disable-static \
     CC=$CC \
     AR=$AR \
