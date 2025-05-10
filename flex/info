@@ -4,6 +4,6 @@
 # Voyager: Firas Khalil Khana (firasuke) <firasuke@glaucuslinux.org>
 
 nom="flex"
-ver="c0c89c1"
+ver="dff2e1b"
 url="https://github.com/westes/flex"
 run="m4"
