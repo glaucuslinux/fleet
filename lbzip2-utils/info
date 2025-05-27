@@ -8,4 +8,4 @@
 nom="lbzip2-utils"
 ver="16751ef"
 url="https://github.com/kjn/lbzip2-utils"
-nop="check"
+opt="noCheck"

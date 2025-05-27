@@ -8,4 +8,4 @@
 nom="sfm"
 ver="db66dd0"
 url="https://github.com/afify/sfm"
-nop="check"
+opt="noCheck"

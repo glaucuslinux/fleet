@@ -11,4 +11,4 @@ url="https://github.com/mesonbuild/meson/releases/download/1.5.1/meson-1.5.1.tar
 sum=""
 bld="python"
 run="python samurai"
-nop="check"
+opt="noCheck"

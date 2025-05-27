@@ -8,4 +8,4 @@
 nom="libuargp"
 ver="1f92296"
 url="https://github.com/xhebox/libuargp"
-nop="check"
+opt="noCheck"
