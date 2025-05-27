@@ -6,14 +6,12 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 prepare() {
-  mkdir -p build
-}
-
-configure() {
   patch \
     -i "$CERD"/$nom/patches/glaucus/0001-fix-man-page.patch \
     -p 0
+}
 
+configure() {
   glaucus-muon \
     -Dinstall_systemd=false \
     -Dlocategroup=locate \
