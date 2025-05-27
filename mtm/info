@@ -6,7 +6,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 nom="mtm"
-ver="b346b86"
+ver="head"
 url="https://github.com/deadpixi/mtm"
 bld="netbsd-curses"
 opt="noCheck"
