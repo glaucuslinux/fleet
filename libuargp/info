@@ -6,6 +6,6 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 nom="libuargp"
-ver="1f92296"
+ver="head"
 url="https://github.com/xhebox/libuargp"
 opt="noCheck"
