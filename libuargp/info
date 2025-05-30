@@ -9,4 +9,4 @@
 nom="libuargp"
 ver="head"
 url="https://github.com/xhebox/libuargp"
-opt="noCheck"
+opt="no-check"
