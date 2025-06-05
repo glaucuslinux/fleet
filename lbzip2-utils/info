@@ -7,6 +7,6 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 nom="lbzip2-utils"
-ver="head"
+ver="latest"
 url="https://github.com/kjn/lbzip2-utils"
 opt="no-check"
