@@ -1,5 +1,5 @@
-# fleet
-glaucus community packages
+# extra
+glaucus extra packages
 
 ## Community
 - [Discord](https://discord.gg/nDKNmNc)
@@ -9,6 +9,6 @@ glaucus community packages
 - [YouTube](https://youtube.com/@glaucuslinux)
 
 ## Mirrors
-- [Codeberg](https://codeberg.org/glaucuslinux/fleet)
-- [GitHub](https://github.com/glaucuslinux/fleet)
-- [SourceHut](https://git.sr.ht/~glaucuslinux/fleet)
+- [Codeberg](https://codeberg.org/glaucuslinux/extra)
+- [GitHub](https://github.com/glaucuslinux/extra)
+- [SourceHut](https://git.sr.ht/~glaucuslinux/extra)
